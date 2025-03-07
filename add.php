@@ -96,15 +96,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="mb-2">
             <label for="book_description" class="form-label">Popis</label>
-            <input class="form-control" type="text" name="book_description" id="book_description" value="" required>
+            <textarea class="form-control" name="book_description" id="book_description" required></textarea>
         </div>
         <div class="mb-2">
             <label for="image_path" class="form-label">Obrazek</label>
             <!-- <input type="file" name="image" accept="image/*" required><br> -->
-            <input type="text+" name="image_path" id="image_path" required><br>
+            <input class="form-control" type="text" name="image_path" id="image_path" required><br>
         </div>
         <div class="mb-2">
-            <button type="submit" class="btn btn-secondary btn-sm">
+            <button type="submit" class="btn btn-success">
                 Uloz to
             </button>
         </div>

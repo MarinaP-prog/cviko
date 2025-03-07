@@ -56,28 +56,36 @@ if ($isbn || $firstname || $lastname || $title) {
     <div class="container">
         <h1 class="display-5">Vyhledat knihu</h1>
         <form action="filter.php" method="GET">
-            <div class="mb-2">
+            <div class="mb-3 row">
                 <label for="firstname">Křestní jméno autora:</label>
-                <input type="text" name="firstname" id="firstname" value="<?php echo htmlspecialchars($firstname); ?>">
+                <div class="col-sm-10">
+                    <input type="text" name="firstname" id="firstname" value="<?php echo htmlspecialchars($firstname); ?>">
+                </div>
             </div>
-            <div class="mb-2">
+            <div class="mb-3 row">
                 <label for="lastname">Příjmení autora:</label>
-                <input type="text" name="lastname" id="lastname" value="<?php echo htmlspecialchars($lastname); ?>">
+                <div class="col-sm-10">
+                    <input type="text" name="lastname" id="lastname" value="<?php echo htmlspecialchars($lastname); ?>">
+                </div>
             </div>
 
-            <div class="mb-2">
+            <div class="mb-3 row">
                 <label for="title">Název knihy:</label>
-                <input type="text" name="title" id="title" value="<?php echo htmlspecialchars($title); ?>">
+                <div class="col-sm-10">
+                    <input type="text" name="title" id="title" value="<?php echo htmlspecialchars($title); ?>">
+                </div>
             </div>
-            <div class="mb-2">
+            <div class="mb-3 row">
                 <label for="isbn">ISBN:</label>
-                <input type="text" name="isbn" id="isbn" value="<?php echo htmlspecialchars($isbn); ?>">
+                <div class="col-sm-10">
+                    <input type="text" name="isbn" id="isbn" value="<?php echo htmlspecialchars($isbn); ?>">
+                </div>
             </div>
 
-            <button type="submit">Vyhledat</button>
+            <button type="submit" class="btn btn-success">Vyhledat</button>
 
             <!-- Tlačítko reset -->
-            <button type="button" onclick="window.location.href = 'filter.php';">Obnovit seznam knih</button>
+            <button type="button" class="btn btn-success" onclick="window.location.href = 'filter.php';">Obnovit seznam knih</button>
         </form>
 
         <!-- Výpis knih -->

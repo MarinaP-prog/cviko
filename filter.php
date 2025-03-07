@@ -1,20 +1,16 @@
 <?php
 include 'map.php';
 
-// Inicializuj proměnné pro parametry vyhledávání
 $isbn = $_GET['isbn'] ?? '';
 $firstname = $_GET['firstname'] ?? '';
 $lastname = $_GET['lastname'] ?? '';
 $title = $_GET['title'] ?? '';
 
-// Vytvoř instanci repository
 $repo = new BookRepository();
 
-// Zpracuj formulář: pokud jsou zadané parametry, hledej knihy, jinak vrať všechny knihy
 if ($isbn || $firstname || $lastname || $title) {
     $books = $repo->searchBook($isbn, $firstname, $lastname, $title);
 } else {
-    // Pokud nejsou žádné filtry, vrať všechny knihy
     $books = $repo->getAllBooks();
 }
 ?>

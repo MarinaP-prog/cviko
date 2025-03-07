@@ -1,0 +1,63 @@
+{
+	// Place your PHP+MySQL-VSB workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"php root": {
+		"prefix": "?p",
+		"body": [
+			"<?php",
+			"$1",
+			"?>"
+		],
+		"description": "Start php"
+	},
+	"echo": {
+		"prefix": "ec",
+		"body": [
+			"echo \"$1\";"
+		],
+		"description": "retezec na vystup"
+	},
+	"promenna": {
+		"prefix": "pr",
+		"body": [
+			"$$1 = $2;"
+		],
+		"description": "vypis promenne"
+	},
+	"print": {
+		"prefix": "rr",
+		"body": [
+			"print_r($$1);"
+		],
+		"description": "print na stranku"
+	},
+	"novy radek": {
+		"prefix": "br",
+		"body": [
+			"echo \"<br>\";",
+			"$0"
+		],
+		"description": "print na stranku"
+	},
+	"asociativni pole": {
+		"prefix": "as",
+		"body": [
+			"$$1 = [$2 => $3,];"
+		],
+		"description": "asociativni pole"
+	},
+}

@@ -16,32 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    exit();
 }
 
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//     $isbn = $_POST['isbn'] ?? '';
-//     $firstname = $_POST['firstname'] ?? '';
-//     $lastname = $_POST['lastname'] ?? '';
-//     $title = $_POST['title'] ?? '';
-//     $book_description = $_POST['book_description'] ?? '';
-
-//     // Ověření, zda byl soubor nahrán
-//     if (!isset($_FILES['image']) || $_FILES['image']['error'] !== UPLOAD_ERR_OK) {
-//         die("Chyba při nahrávání souboru.");
-//     }
-
-//     $file = $_FILES['image']; // Obrázek ze souborového pole
-
-//     $repo = new BookRepository();
-//     $book = new Book($isbn, $firstname, $lastname, $book_description, $title, '');
-
-//     // Předání souboru k uložení a vytvoření knihy v DB
-//     $repo->createBook($book, $file);
-
-//     header('Location: index.php');
-//     exit();
-// }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,7 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="mb-2">
             <label for="image_path" class="form-label">Obrazek</label>
-            <!-- <input type="file" name="image" accept="image/*" required><br> -->
             <input type="text+" name="image_path" id="image_path" required><br>
         </div>
         <div class="mb-2">
